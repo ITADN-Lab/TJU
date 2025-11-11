@@ -7,7 +7,7 @@
 This repository provides PyTorch implementations of advanced optimizers from the TJU family, inspired by recent advancements in adaptive optimization techniques. These optimizers integrate approximate Hessian information with gradient-based updates for improved training stability and efficiency in deep learning models.
 
 - **TJU_v1**: An implementation of the TJU algorithm, which combines approximate Hessian with EMA of gradients, supporting various weight decay strategies and warmup schedules.
-- **TJU_v3**: An implementation of the AdTJU algorithm, an improved variant that integrates Adam-like updates with scaled approximate Hessian addition to prevent small steps, with optional cosine annealing. Based on the core ideas from the CVPR paper on AdTJU.
+- **TJU_v3**: An implementation of the AdTJU algorithm, an improved variant that integrates Adam-like updates with scaled approximate Hessian addition to prevent small steps, with optional cosine annealing. 
 - **TJU_v4**: An implementation of the NdaTJU algorithm, which fixes decoupled weight decay (AdamW-style) while maintaining the precision of TJU_v3. It ensures correct weight decay scaling with learning rate and restores update stability.
 
 These optimizers are designed for flexibility in training neural networks, particularly in scenarios requiring robust convergence and handling of complex loss landscapes.
