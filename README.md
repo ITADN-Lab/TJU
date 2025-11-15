@@ -73,6 +73,11 @@ optimizer = TJU_v4(model.parameters(), lr=1e-3, betas=(0.9, 0.999), beta_h=0.85,
 
 For full parameter details, refer to the docstrings in the code.
 
+### RUN
+```python
+ python .\cifar10\cifar10_train.py
+```
+
 ## Performance Notes
 - **When to Use**: TJU_v1 (TJU) for scenarios needing robust gradient EMA and Hessian guidance. TJU_v3 (AdTJU) for improved Adam-like updates with Hessian scaling. TJU_v4 (NDatju) for tasks requiring precise decoupled weight decay, such as fine-tuning large models.
 - **Hyperparameters**: Tune `hessian_scale` (e.g., 0.05-0.1) to balance Hessian influence. Use 'belief' rebound for adaptive bounding in noisy gradients.
